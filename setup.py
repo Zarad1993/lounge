@@ -3,13 +3,19 @@ try:
 except ImportError:
     from distutils.core import setup, find_packages
 
+with io.open("README.md", "rt", encoding="utf8") as f:
+    readme = f.read()
+
+with io.open("lounge/__init__.py", "rt", encoding="utf8") as f:
+    version = re.search(r"__version__ = \'(.*?)\'", f.read()).group(1)
+
 setup(
     name="lounge",
-    version="0.0.0",
+    version=version,
     author="Mohammad Albakri",
     author_email="mohammad.albakri93@gmail.com",
     packages=find_packages(),
-    long_description=open("README.md").read(),
+    long_description=readme,
     long_description_content_type="text/markdown",
     url="https://github.com/Zarad1993/lounge",
     install_requires=[
