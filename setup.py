@@ -1,3 +1,6 @@
+import io
+import re
+
 try:
     from setuptools import setup, find_packages
 except ImportError:
@@ -26,7 +29,7 @@ setup(
         "pytest==4.4.0"
         ],
     entry_points = {
-        "console_scripts": ["lounge"],
+        "console_scripts": ["lounge=lounge.main:main"],
     },
     package_data={
         '': ['*.yaml'],
