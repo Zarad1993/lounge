@@ -24,7 +24,7 @@ setup(
     install_requires=[
         "click==7.0",
         "pyyaml>=4.2b1",
-        "gitpython==2.1.11",
+        "gitpython==3.1.32",
         "watchdog==0.9.0",
         "pytest==4.4.0"
         ],
